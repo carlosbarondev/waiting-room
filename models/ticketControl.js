@@ -54,7 +54,7 @@ class ticketControl {
             const ticket = this.pending.shift(); // Saco el primer ticket de la lista de pendientes
             ticket.desktop = desktop;
             this.last4.unshift(ticket);
-            if (this.last4 > 4) {
+            if (this.last4.length > 4) {
                 this.last4.splice(-1, 1);
             }
             this.saveDB();
